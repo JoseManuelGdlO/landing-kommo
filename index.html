@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jose Manuel Garcia de la O - Partner Kommo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 60px 0;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 300;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header .subtitle {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .kommo-badge {
+            background: rgba(255,255,255,0.2);
+            padding: 10px 25px;
+            border-radius: 25px;
+            display: inline-block;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .main-content {
+            background: white;
+            border-radius: 20px;
+            padding: 60px;
+            margin: 40px 0;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .intro-section {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .intro-section h2 {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        .intro-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature-card {
+            background: #f8f9ff;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid #e8ecff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin-top: 50px;
+            padding: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            color: white;
+        }
+
+        .cta-section h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            color: white;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .main-content {
+                padding: 30px;
+                margin: 20px 0;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Jose Manuel Garcia de la O</h1>
+            <div class="subtitle">Especialista en Soluciones CRM</div>
+            <div class="kommo-badge">
+                <strong>Partner Oficial Kommo</strong>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="intro-section">
+                <h2>¡Hola! Soy Jose Manuel</h2>
+                <div class="intro-text">
+                    <p>Como <strong>Partner Oficial de Kommo</strong>, me especializo en ayudar a empresas a optimizar sus procesos de ventas y gestión de clientes a través de soluciones CRM innovadoras y personalizadas.</p>
+                    
+                    <p>Con años de experiencia en el sector, he ayudado a numerosas empresas a transformar su manera de gestionar las relaciones con sus clientes, implementando estrategias efectivas que impulsan el crecimiento y la eficiencia operativa.</p>
+                    
+                    <p>Mi compromiso es brindarte soluciones a medida que se adapten perfectamente a las necesidades específicas de tu negocio, garantizando resultados tangibles y un retorno de inversión excepcional.</p>
+                </div>
+            </section>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Implementación Experta</h3>
+                    <p>Configuración profesional de Kommo adaptada a tu flujo de trabajo específico, maximizando la productividad de tu equipo.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Optimización de Ventas</h3>
+                    <p>Estrategias probadas para aumentar tus conversiones y mejorar el seguimiento de oportunidades de venta.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Soporte Continuo</h3>
+                    <p>Accompanyamiento completo durante todo el proceso, desde la implementación hasta la optimización continua.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3>Consultoría Estratégica</h3>
+                    <p>Asesoramiento experto para integrar Kommo de manera efectiva en tu estrategia de negocio global.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Integraciones</h3>
+                    <p>Conecta Kommo con tus herramientas favoritas para crear un ecosistema de trabajo perfectamente integrado.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Capacitación</h3>
+                    <p>Formación completa para tu equipo, asegurando que aprovechen al máximo todas las funcionalidades de Kommo.</p>
+                </div>
+            </div>
+
+            <section class="cta-section">
+                <h3>¿Listo para transformar tu negocio?</h3>
+                <p>Descubre cómo Kommo puede revolucionar tu gestión de clientes y ventas</p>
+                <a href="mailto:contacto@josemanuelgarcia.com" class="cta-button">Contactar Ahora</a>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Jose Manuel Garcia de la O - Partner Oficial Kommo</p>
+            <p>Transformando negocios a través de soluciones CRM innovadoras</p>
+        </footer>
+    </div>
+</body>
+</html> 
