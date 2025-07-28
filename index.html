@@ -75,39 +75,22 @@
 
         /* Insignia Kommo clickeable */
         .kommo-badge {
-            background: rgba(255,255,255,0.2);
-            padding: 15px 30px;
-            border-radius: 30px;
             display: inline-block;
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(255,255,255,0.3);
             text-decoration: none;
-            color: white;
-            font-weight: bold;
             transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
         }
 
         .kommo-badge:hover {
-            background: rgba(255,255,255,0.3);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            transform: translateY(-3px) scale(1.05);
+            filter: drop-shadow(0 8px 16px rgba(0,0,0,0.3));
         }
 
-        .kommo-badge::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.5s;
-        }
-
-        .kommo-badge:hover::before {
-            left: 100%;
+        .kommo-badge img {
+            width: 200px;
+            height: auto;
+            display: block;
+            object-fit: contain;
         }
 
         /* Navegación intuitiva */
@@ -339,7 +322,7 @@
             <h1>Jose Manuel Garcia de la O</h1>
             <div class="subtitle">Especialista en Soluciones CRM</div>
             <a href="https://www.kommo.com" target="_blank" class="kommo-badge">
-                <strong>Partner Oficial Kommo</strong>
+                <img src="badge-light.png" alt="Kommo Partner Badge" title="Partner Oficial Kommo">
             </a>
         </header>
 
@@ -359,6 +342,11 @@
             <section id="kommo" class="kommo-section">
                 <h3>¿Qué es Kommo?</h3>
                 <p>Kommo es una plataforma CRM líder que revoluciona la gestión de clientes y ventas. Como Partner Oficial, te ofrezco acceso exclusivo a esta herramienta poderosa junto con mi experiencia para maximizar su potencial en tu negocio.</p>
+                <div style="margin: 30px 0;">
+                    <a href="https://www.kommo.com" target="_blank" class="kommo-badge">
+                        <img src="badge-light.png" alt="Kommo Partner Badge" title="Partner Oficial Kommo">
+                    </a>
+                </div>
                 <a href="https://www.kommo.com" target="_blank" class="kommo-button">Conocer Kommo</a>
             </section>
 
@@ -405,7 +393,10 @@
             <section id="contacto" class="cta-section">
                 <h3>¿Listo para transformar tu negocio?</h3>
                 <p>Descubre cómo Kommo puede revolucionar tu gestión de clientes y ventas</p>
-                <a href="mailto:contacto@josemanuelgarcia.com" class="cta-button">Contactar Ahora</a>
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 20px;">
+                    <a href="mailto:josemanuelgarciadelao@gmail.com" class="cta-button">Contactar Ahora</a>
+                    <a href="https://www.kommo.com" target="_blank" class="cta-button" style="background: rgba(255,255,255,0.9); color: #667eea;">Visitar Kommo</a>
+                </div>
             </section>
         </main>
 
