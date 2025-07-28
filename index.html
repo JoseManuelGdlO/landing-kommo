@@ -25,10 +25,39 @@
             padding: 20px;
         }
 
+        /* Logo JM */
+        .logo {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            width: 60px;
+            height: 60px;
+            background: #8B0000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #F5F5DC;
+            font-family: 'Georgia', serif;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
+
+        /* Header mejorado */
         .header {
             text-align: center;
-            padding: 60px 0;
+            padding: 80px 0 60px;
             color: white;
+            position: relative;
         }
 
         .header h1 {
@@ -44,13 +73,68 @@
             margin-bottom: 30px;
         }
 
+        /* Insignia Kommo clickeable */
         .kommo-badge {
             background: rgba(255,255,255,0.2);
-            padding: 10px 25px;
-            border-radius: 25px;
+            padding: 15px 30px;
+            border-radius: 30px;
             display: inline-block;
             backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.3);
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .kommo-badge:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        .kommo-badge::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .kommo-badge:hover::before {
+            left: 100%;
+        }
+
+        /* Navegación intuitiva */
+        .nav-menu {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-item {
+            background: rgba(255,255,255,0.2);
+            padding: 10px 20px;
+            border-radius: 25px;
+            color: white;
+            text-decoration: none;
+            backdrop-filter: blur(10px);
             border: 1px solid rgba(255,255,255,0.3);
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .nav-item:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
         }
 
         .main-content {
@@ -81,6 +165,44 @@
             margin: 0 auto;
         }
 
+        /* Sección Kommo destacada */
+        .kommo-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 40px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .kommo-section h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .kommo-section p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .kommo-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .kommo-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -95,6 +217,7 @@
             text-align: center;
             border: 2px solid #e8ecff;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
         }
 
         .feature-card:hover {
@@ -158,7 +281,33 @@
             opacity: 0.8;
         }
 
+        /* Scroll suave */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
+            .logo {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+                top: 15px;
+                left: 15px;
+            }
+
+            .nav-menu {
+                top: 15px;
+                right: 15px;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .nav-item {
+                padding: 8px 15px;
+                font-size: 12px;
+            }
+
             .header h1 {
                 font-size: 2.5rem;
             }
@@ -175,13 +324,23 @@
     </style>
 </head>
 <body>
+    <!-- Logo JM -->
+    <a href="#" class="logo">JM</a>
+
+    <!-- Navegación -->
+    <nav class="nav-menu">
+        <a href="#servicios" class="nav-item">Servicios</a>
+        <a href="#kommo" class="nav-item">Kommo</a>
+        <a href="#contacto" class="nav-item">Contacto</a>
+    </nav>
+
     <div class="container">
         <header class="header">
             <h1>Jose Manuel Garcia de la O</h1>
             <div class="subtitle">Especialista en Soluciones CRM</div>
-            <div class="kommo-badge">
+            <a href="https://www.kommo.com" target="_blank" class="kommo-badge">
                 <strong>Partner Oficial Kommo</strong>
-            </div>
+            </a>
         </header>
 
         <main class="main-content">
@@ -196,45 +355,54 @@
                 </div>
             </section>
 
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🚀</div>
-                    <h3>Implementación Experta</h3>
-                    <p>Configuración profesional de Kommo adaptada a tu flujo de trabajo específico, maximizando la productividad de tu equipo.</p>
-                </div>
+            <!-- Sección Kommo destacada -->
+            <section id="kommo" class="kommo-section">
+                <h3>¿Qué es Kommo?</h3>
+                <p>Kommo es una plataforma CRM líder que revoluciona la gestión de clientes y ventas. Como Partner Oficial, te ofrezco acceso exclusivo a esta herramienta poderosa junto con mi experiencia para maximizar su potencial en tu negocio.</p>
+                <a href="https://www.kommo.com" target="_blank" class="kommo-button">Conocer Kommo</a>
+            </section>
 
-                <div class="feature-card">
-                    <div class="feature-icon">📈</div>
-                    <h3>Optimización de Ventas</h3>
-                    <p>Estrategias probadas para aumentar tus conversiones y mejorar el seguimiento de oportunidades de venta.</p>
-                </div>
+            <section id="servicios">
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3>Implementación Experta</h3>
+                        <p>Configuración profesional de Kommo adaptada a tu flujo de trabajo específico, maximizando la productividad de tu equipo.</p>
+                    </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3>Soporte Continuo</h3>
-                    <p>Accompanyamiento completo durante todo el proceso, desde la implementación hasta la optimización continua.</p>
-                </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📈</div>
+                        <h3>Optimización de Ventas</h3>
+                        <p>Estrategias probadas para aumentar tus conversiones y mejorar el seguimiento de oportunidades de venta.</p>
+                    </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">💡</div>
-                    <h3>Consultoría Estratégica</h3>
-                    <p>Asesoramiento experto para integrar Kommo de manera efectiva en tu estrategia de negocio global.</p>
-                </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Soporte Continuo</h3>
+                        <p>Acompañamiento completo durante todo el proceso, desde la implementación hasta la optimización continua.</p>
+                    </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">🔄</div>
-                    <h3>Integraciones</h3>
-                    <p>Conecta Kommo con tus herramientas favoritas para crear un ecosistema de trabajo perfectamente integrado.</p>
-                </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💡</div>
+                        <h3>Consultoría Estratégica</h3>
+                        <p>Asesoramiento experto para integrar Kommo de manera efectiva en tu estrategia de negocio global.</p>
+                    </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">📚</div>
-                    <h3>Capacitación</h3>
-                    <p>Formación completa para tu equipo, asegurando que aprovechen al máximo todas las funcionalidades de Kommo.</p>
-                </div>
-            </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔄</div>
+                        <h3>Integraciones</h3>
+                        <p>Conecta Kommo con tus herramientas favoritas para crear un ecosistema de trabajo perfectamente integrado.</p>
+                    </div>
 
-            <section class="cta-section">
+                    <div class="feature-card">
+                        <div class="feature-icon">📚</div>
+                        <h3>Capacitación</h3>
+                        <p>Formación completa para tu equipo, asegurando que aprovechen al máximo todas las funcionalidades de Kommo.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contacto" class="cta-section">
                 <h3>¿Listo para transformar tu negocio?</h3>
                 <p>Descubre cómo Kommo puede revolucionar tu gestión de clientes y ventas</p>
                 <a href="mailto:contacto@josemanuelgarcia.com" class="cta-button">Contactar Ahora</a>
